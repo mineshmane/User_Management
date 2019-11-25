@@ -20,3 +20,28 @@
 .App-link {
   color: #09d3ac;
 }
+
+.login{
+  flex: auto;
+  flex-direction: row;
+  
+}
+
+.Login {
+  padding: 150px 0;
+}
+
+.Login form {
+  margin: 0 auto;
+  max-width: 620px;
+}
+/* @media only and (min-width: 480px) {
+  .Login {
+    padding: 60px 0;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+} */
