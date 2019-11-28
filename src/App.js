@@ -2,26 +2,38 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/login'
-
+import HomePgae from './pages/homePage'
+import homeComponent from './components/home'
+import ContentDisplayComponent from './components/content'
+import ChartComponent from './components/charts'
 function App() {
   return (
 
-  
 
-    <Router>
-      <Route exact path="/login" component={Login} />
-      
-      {/* <Route path="/dashboard/getNotesByLabel" component={NotesByLabel} /> */}
+   
+        <Router>
+          <Route exact path="/login" component={Login} />
+          <Route path="/home" component={homeComponent} />
+          <Route path="/home/admin" component={ContentDisplayComponent} />
+          <Route path="/home/chart" component={ChartComponent}/>
 
 
-{/* 
+
+
+
+          {/* <Route path="/dashboard/getNotesByLabel" component={NotesByLabel} /> */}
+
+
+          {/* 
       <Route path="/dashboard/Archive" component={GetArchivedNotes} />
       <Route path="/dashboard/TrashNotes" component={GetTrashNotes} /> */}
 
 
 
-    </Router>
+        </Router>
+     
 
     // <div className="App">
     //   <header className="App-header">
