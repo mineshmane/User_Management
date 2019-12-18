@@ -58,8 +58,9 @@ import { LoginUser } from '../actions';
         // this.dispatchEvent({data:data})
 
 
-        mapDispatchToProps(this.props.Login,{data:data})
-        console.log(" after data assign  ",mapDispatchToProps);
+        // mapDispatchToProps(this.props.Login,{data:data})
+        // console.log(" after data assign  ",mapDispatchToProps);
+        this.props.login(data)
         
     }
 
@@ -91,7 +92,7 @@ import { LoginUser } from '../actions';
                         </div>
                         <div>
 
-                            <FormGroup bsSize="large">
+                            <FormGroup >
 
                                 <FormControl className="input"
                                     placeholder="UserName"
@@ -106,7 +107,7 @@ import { LoginUser } from '../actions';
                         </div>
                         <div className="margin-top">
 
-                            <FormGroup bsSize="large">
+                            <FormGroup >
 
                                 <FormControl className="input"
                                     placeholder="Password"
@@ -119,7 +120,7 @@ import { LoginUser } from '../actions';
                         </div>
                         <div className="margin-top">
 
-                            <Button className="btn btn-primary btn-lg btn-block" onClick={this.props.login}   disabled={!this.validateForm} >
+                            <Button className="btn btn-primary btn-lg btn-block" onClick={this.login}   disabled={!this.validateForm} >
                               
                                 Login  </Button>
                         </div>
@@ -152,13 +153,13 @@ import { LoginUser } from '../actions';
 
 const mapStateToProps = (state, ownProps) => {
     return {
-    //   token: state.login.email,
+    //   data: this.state,
     //   status: state.login.status,
     };
   }
   const mapDispatchToProps = (dispatch) => {
     return {
-      login: () => dispatch({type:"LOGIN", email:'mineshmane94@gmail.com', password:'123123'}),
+      login: (data) => dispatch({type:"LOGIN", data}),
       logout: () => dispatch({type:"LOGOUT"}),
     };
   }
